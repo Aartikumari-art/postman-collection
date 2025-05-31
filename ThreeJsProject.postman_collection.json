@@ -1,0 +1,242 @@
+{
+	"info": {
+		"_postman_id": "5840beec-cb67-4c6b-a660-98cec8e8f5b5",
+		"name": "ThreeJsProject",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36372768"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"aarti\",\r\n    \"email\":\"aart@gmail.com\",\r\n    \"password\":\"12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"aart@gmail.com\",\r\n    \"password\":\"12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create#D structure",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "hiii",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "write some description about my three js project wjich iis keep the node react phph djfkdhfjdhfiurhgriufhdjvhdfuhvf8igerhiufhriu",
+							"type": "text"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/kaart/Downloads/ceramic.glb"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/three/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"three",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getObjects",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/three/get-objects",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"three",
+						"get-objects"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete3D",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/three/delete/67a20e1e196bc692d5fcb7e7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"three",
+						"delete",
+						"67a20e1e196bc692d5fcb7e7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/three/get-by-id/67a35f74113c03f98cd6a879",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"three",
+						"get-by-id",
+						"67a35f74113c03f98cd6a879"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "plz return my pen",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "you are there for utilizing the energy in better way",
+							"type": "text"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/kaart/Downloads/1738669113217.glb",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/three/update/67a35faf113c03f98cd6a87d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"three",
+						"update",
+						"67a35faf113c03f98cd6a87d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"uyghvbn\",\r\n    \"email\":\"uhhg@gmail.com\",\r\n    \"message\":\"u g fgcv vvcdfxdsd utghghvh\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://backend-4akl.onrender.com/user/contact",
+					"protocol": "https",
+					"host": [
+						"backend-4akl",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"user",
+						"contact"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

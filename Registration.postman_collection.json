@@ -1,0 +1,854 @@
+{
+	"info": {
+		"_postman_id": "9437e481-404a-473d-a5ea-c7a97ad660a6",
+		"name": "Registration",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36372768"
+	},
+	"item": [
+		{
+			"name": "singlePeople",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YTIzNGVkODIwN2Y1YmI1Mzk2OTYwMiIsIm5hbWUiOiJBcHVydmEiLCJlbWFpbCI6ImFtbkBnbWFpbC5jb20iLCJpYXQiOjE3MjE5MDY0MTQsImV4cCI6MTcyMTk4NjQxNH0.IupcPjRTbORH9PuSrIgSsyLNjJeZzDZq06bYsMxkccU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/people",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"people"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllPeople",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YTIzNGVkODIwN2Y1YmI1Mzk2OTYwMiIsIm5hbWUiOiJBcHVydmEiLCJlbWFpbCI6ImFtbkBnbWFpbC5jb20iLCJpYXQiOjE3MjE5MDY0MTQsImV4cCI6MTcyMTk4NjQxNH0.IupcPjRTbORH9PuSrIgSsyLNjJeZzDZq06bYsMxkccU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/people/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"people",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "loginPeople",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"ak\",\r\n    \"password\":\"akg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseurl}}/people/login",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"people",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SignUp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Apurva",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "amn@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "ak",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "akg",
+							"type": "text"
+						},
+						{
+							"key": "avtar",
+							"type": "file",
+							"src": "/C:/Users/kaart/Downloads/1sst.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/people/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"people",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-api/test-user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Aarti\",\r\n    \"email\":\"kaarti3@gmail.com\",\r\n    \"mobile\":\"8765094365\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/user-api/test-user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"user-api",
+						"test-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/user-api/test-users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/user-api/test-users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"user-api",
+						"test-users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/user-api/delete-user",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/user-api/delete-user/671b86753a1ce0f33b35428a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"user-api",
+						"delete-user",
+						"671b86753a1ce0f33b35428a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/user-api/user-update/",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Aacharya Prashnat\",\r\n    \"email\":\"ap@gmail.com\",\r\n    \"mobile\":\"89765432\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/user-api/user-update/671b8ffa3a1ce0f33b354294",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"user-api",
+						"user-update",
+						"671b8ffa3a1ce0f33b354294"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"nchr\",\r\n    \"email\":\"hmkh@gmail.com\",\r\n    \"password\":\"000000\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/user-api/create-user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"user-api",
+						"create-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/get-user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/user-api/get-user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"user-api",
+						"get-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/internships/apply",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/internships/submissions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"internships",
+						"submissions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/submission/internship",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "fullName",
+							"value": "ABCD",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "abcd@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "phoneNumber",
+							"value": "6206510870",
+							"type": "text"
+						},
+						{
+							"key": "dob",
+							"value": "2024-10-01",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "ihwjdwehfde",
+							"type": "text"
+						},
+						{
+							"key": "linkedIn",
+							"value": "bfeufje",
+							"type": "text"
+						},
+						{
+							"key": "gitHub",
+							"value": "bfefgeu",
+							"type": "text"
+						},
+						{
+							"key": "university",
+							"value": "fgu3ryfe",
+							"type": "text"
+						},
+						{
+							"key": "universityOther",
+							"value": "fb3urhy3",
+							"type": "text"
+						},
+						{
+							"key": "expectedGraduationDate",
+							"value": "3ieu3ir",
+							"type": "text"
+						},
+						{
+							"key": "course",
+							"value": "rn3u4rh4u",
+							"type": "text"
+						},
+						{
+							"key": "preferredRole",
+							"value": "rgfehfb",
+							"type": "text"
+						},
+						{
+							"key": "preferredStartDate",
+							"value": "2024-10-10",
+							"type": "text"
+						},
+						{
+							"key": "preferredDuration",
+							"value": "2024-01-02",
+							"type": "text"
+						},
+						{
+							"key": "typeOfInternship",
+							"value": "Full-time",
+							"type": "text"
+						},
+						{
+							"key": "priorInternship",
+							"value": "Yes",
+							"type": "text"
+						},
+						{
+							"key": "internshipType",
+							"value": "Remote",
+							"type": "text"
+						},
+						{
+							"key": "yearOfStudy",
+							"value": "2024-03-07",
+							"type": "text"
+						},
+						{
+							"key": "cgpa",
+							"value": "8.2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/internships/apply",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"internships",
+						"apply"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/internships/apply",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3007/web-api/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Aarti kumari\",\r\n    \"email\":\"aarti.kc@gmail.com\",\r\n    \"password\":\"1111\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3007/web-api/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3007",
+					"path": [
+						"web-api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3007/web-api/get-users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3007/web-api/get-users?page=1&limit=6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3007",
+					"path": [
+						"web-api",
+						"get-users"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"meena@gmail.com\",\r\n    \"password\":\"1111\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3007/web-api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3007",
+					"path": [
+						"web-api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3007/web-api/subscribe-newsLetter",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"aarti@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3007/web-api/subscribe-newsLetter",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3007",
+					"path": [
+						"web-api",
+						"subscribe-newsLetter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "quleep/api/users",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "aarti",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "aarhujg@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "aarti@123",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "6206514834",
+							"type": "text"
+						},
+						{
+							"key": "education",
+							"value": "B.tech",
+							"type": "text"
+						},
+						{
+							"key": "photo",
+							"type": "file",
+							"src": "postman-cloud:///1ef4725d-7e44-4c80-b3cf-b104577c512d"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/users/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "quleep-userLogin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"lav@gmail.com\",\r\n    \"password\":\"aarti@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/users/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create-blog",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NjgzNmY0YTExNjcwZGRkYjRhOGY4MCIsImlhdCI6MTczNDg4NzYxNSwiZXhwIjoxNzM0ODkxMjE1fQ.tmrP5oO8HXxiR1obz-NpbLI9q7VpJKMyv8Gl1e-JKMI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "My Elder Brother: The Guiding Star of My Life",
+							"type": "text"
+						},
+						{
+							"key": "blogImage",
+							"type": "file",
+							"src": "postman-cloud:///1ef471b1-ad74-47a0-90f7-eebec06a7177"
+						},
+						{
+							"key": "about",
+							"value": "In this post, you can talk about how your elder brother has always been a role model, offering advice, support, and unconditional love. Highlight his personality, achievements, and the impact he has had on your life. You can include stories from your childhood, the challenges he overcame, and how he shaped who you are today.",
+							"type": "text"
+						},
+						{
+							"key": "category",
+							"value": "devotional",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/posts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAll-blogs",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NjcxZjg0MDVmNzlmN2Y5Zjk5ODdjMyIsImlhdCI6MTczNDg1NjM0MywiZXhwIjoxNzM0ODU5OTQzfQ.7qNLibS8eQ--NAuzdOSVwQN8JKhWsiyl1FAm-QvMdzk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/posts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Blog-delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NjcxZjg0MDVmNzlmN2Y5Zjk5ODdjMyIsImlhdCI6MTczNDg1NjM0MywiZXhwIjoxNzM0ODU5OTQzfQ.7qNLibS8eQ--NAuzdOSVwQN8JKhWsiyl1FAm-QvMdzk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/posts/6767bc63b063ae74ad484c12",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"posts",
+						"6767bc63b063ae74ad484c12"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Blog-update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NjcxZjg0MDVmNzlmN2Y5Zjk5ODdjMyIsImlhdCI6MTczNDg1NjM0MywiZXhwIjoxNzM0ODU5OTQzfQ.7qNLibS8eQ--NAuzdOSVwQN8JKhWsiyl1FAm-QvMdzk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "Going to research the medicine to prevent the cold",
+							"type": "text"
+						},
+						{
+							"key": "blogImage",
+							"type": "file",
+							"src": "postman-cloud:///1ef471b1-ad74-47a0-90f7-eebec06a7177"
+						},
+						{
+							"key": "about",
+							"value": "const { userMiddleware } = require(\"../middlewares/authMiddleware\"); , handleUpdateBloghandleUpdateBloghandleUpdateBloghandleUpdateBloghandleUpdateBloghandleUpdateBloghandleUpdateBloghandleUpdateBlogv",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/posts/6768df978232dc7cf4e2e3c1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"posts",
+						"6768df978232dc7cf4e2e3c1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getBlogById",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NjgzNmY0YTExNjcwZGRkYjRhOGY4MCIsImlhdCI6MTczNDg4NzYxNSwiZXhwIjoxNzM0ODkxMjE1fQ.tmrP5oO8HXxiR1obz-NpbLI9q7VpJKMyv8Gl1e-JKMI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/posts/67685e55a11670dddb4a8fb9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"posts",
+						"67685e55a11670dddb4a8fb9"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

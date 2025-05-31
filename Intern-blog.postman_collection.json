@@ -1,0 +1,337 @@
+{
+	"info": {
+		"_postman_id": "1c549927-aa97-4ab6-a655-196127bb146a",
+		"name": "Intern-blog",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36372768"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"kiran\",\r\n    \"email\":\"kiran@gmail.com\",\r\n    \"password\":\"kiran43\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://:5050/auth/register-intern",
+					"protocol": "http",
+					"port": "5050",
+					"path": [
+						"auth",
+						"register-intern"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"ak@gmail.com\",\r\n    \"password\":\"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5050/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create_blog",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4Mjg5YjM1M2I2YmZhZTE5MDE3YzNiMCIsImVtYWlsIjoibWFoYWtAZ21haWwuY29tIiwiaWF0IjoxNzQ3NDkxNjQyLCJleHAiOjE3NDgwOTY0NDJ9._AZP9LzuEPwxX4dfKWJc61Y2BNH5FQ4LKGrrnLwJ0Jw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"Over heating on the road\",\r\n    \"content\":\"There are ingnorence of the something by the human beiungs\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5050/blog/create-blog",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"blog",
+						"create-blog"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "edit_blog",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4Mjg5YjM1M2I2YmZhZTE5MDE3YzNiMCIsImVtYWlsIjoibWFoYWtAZ21haWwuY29tIiwiaWF0IjoxNzQ3NDkxNjQyLCJleHAiOjE3NDgwOTY0NDJ9._AZP9LzuEPwxX4dfKWJc61Y2BNH5FQ4LKGrrnLwJ0Jw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"consumption leading to warming\",\r\n    \"content\":\"There are ingnorence of the something by the human beiungs\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5050/blog/edit-blog/68289db1a6684e4efd772699",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"blog",
+						"edit-blog",
+						"68289db1a6684e4efd772699"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4Mjg5YjM1M2I2YmZhZTE5MDE3YzNiMCIsImVtYWlsIjoibWFoYWtAZ21haWwuY29tIiwiaWF0IjoxNzQ3NDkxNjQyLCJleHAiOjE3NDgwOTY0NDJ9._AZP9LzuEPwxX4dfKWJc61Y2BNH5FQ4LKGrrnLwJ0Jw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:5050/blog/delete-blog/68289db1a6684e4efd772699",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"blog",
+						"delete-blog",
+						"68289db1a6684e4efd772699"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5050/blog",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:5050/blog",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"blog"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getsingle by id",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "get_my_blogs",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4Mjg4ZTg3ZDcyNmIxZGMzYTljMGE5MSIsImVtYWlsIjoiYWtAZ21haWwuY29tIiwiaWF0IjoxNzQ3NTM3ODg2LCJleHAiOjE3NDgxNDI2ODZ9.uvSxNBm0D1Iqj23wMBwq4uSDu4eYw1hyGfqX4ijtrvI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:5050/blog/my-blogs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"blog",
+						"my-blogs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "chatboat_register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"kiran\",\r\n    \"email\":\"kiran1@gmail.com\",\r\n    \"password\":\"kiran\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4040/user/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4040",
+					"path": [
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"kiran1@gmail.com\",\r\n    \"password\":\"kiran\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "message",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"message\" :\"what is redux\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/user/message",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"user",
+						"message"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
