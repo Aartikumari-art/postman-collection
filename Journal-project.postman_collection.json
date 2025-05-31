@@ -1,0 +1,1368 @@
+{
+	"info": {
+		"_postman_id": "9c43d2e6-c8c3-486b-bd06-7463f1d7b067",
+		"name": "Journal-project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36372768"
+	},
+	"item": [
+		{
+			"name": "journal-login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "aarti473@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "111111",
+							"type": "text"
+						},
+						{
+							"key": "type",
+							"value": "reviewer",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/journal-backend/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"journal-backend",
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjMiLCJlbWFpbCI6Imt1c2gxMjNAZ21haWwuY29tIiwibmFtZSI6ImFhcnRpIGt1bWFyaSIsIkFQSV9USU1FIjoxNzM1NDA4MTQ3fQ.b7udtxnYkqtb-e0ZDIJCsK6M-wesKK2GetDSC83EmNI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "abcd",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "gupta@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "contact",
+							"value": "68574939478",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "111111",
+							"type": "text"
+						},
+						{
+							"key": "type",
+							"value": "author",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/journal-project/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"journal-project",
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "ahsdjsb",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "uetyb@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "message",
+							"value": "dugfbhdbv uefehfjdb ehrihfjdbvndb fei utghvg",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/journal-backend/api/auth/contact",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"journal-backend",
+						"api",
+						"auth",
+						"contact"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAll",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJlbWFpbCI6ImF1dGhvckBnbWFpbC5jb20iLCJ0eXBlIjoiYXV0aG9yIiwiQVBJX1RJTUUiOjE3MzgwNTA0MDB9.MtJA-6OBm7-z5NrtHiaWg2L0KOO0vMNUMrKUg0l1Ns0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/journal-backend/api/user/get_journals",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"journal-backend",
+						"api",
+						"user",
+						"get_journals"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create_journal",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjI1IiwiZW1haWwiOiJwdWJsaXNoZXJAZ21haWwuY29tIiwidHlwZSI6InB1Ymxpc2hlciIsImNyZWF0ZWRfYXQiOiIyMDI1LTAxLTEzIDIyOjExOjUyIiwiQVBJX1RJTUUiOjE3MzY4Njg2MjJ9.TAMkif848aDhNFahIOH4U3unUAs3r7TZsRP0K9rKhoI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "journal_name",
+							"value": "robotics management",
+							"type": "text"
+						},
+						{
+							"key": "eissn_no",
+							"value": "222534",
+							"type": "text"
+						},
+						{
+							"key": "pissn_no",
+							"value": "324",
+							"type": "text"
+						},
+						{
+							"key": "first_volume",
+							"value": "233",
+							"type": "text"
+						},
+						{
+							"key": "number_of_issue_per_year",
+							"value": "Monthly",
+							"type": "text"
+						},
+						{
+							"key": "publisher_name",
+							"value": "Aarti",
+							"type": "text"
+						},
+						{
+							"key": "broad_research_area",
+							"value": "gopalganj",
+							"type": "text"
+						},
+						{
+							"key": "website_link",
+							"value": "http://localhost/journal-backend/api/auth/add_journal",
+							"type": "text"
+						},
+						{
+							"key": "journal_submission_link",
+							"value": "http://localhost/journal-backend/api/auth/add_journal",
+							"type": "text"
+						},
+						{
+							"key": "indexing",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "country",
+							"value": "India",
+							"type": "text"
+						},
+						{
+							"key": "state",
+							"value": "New York",
+							"type": "text"
+						},
+						{
+							"key": "publication_type",
+							"value": "Paid",
+							"type": "text"
+						},
+						{
+							"key": "usd_publication_charge",
+							"value": "4",
+							"type": "text"
+						},
+						{
+							"key": "review_type",
+							"value": "Double-Blind",
+							"type": "text"
+						},
+						{
+							"key": "review_time",
+							"value": "20",
+							"type": "text"
+						},
+						{
+							"key": "approval_status",
+							"value": "pending",
+							"type": "text"
+						},
+						{
+							"key": "user_id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/journal-backend/api/user/create_journal",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"journal-backend",
+						"api",
+						"user",
+						"create_journal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete_api",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjI1IiwiZW1haWwiOiJwdWJsaXNoZXJAZ21haWwuY29tIiwidHlwZSI6InB1Ymxpc2hlciIsImNyZWF0ZWRfYXQiOiIyMDI1LTAxLTEzIDIyOjExOjUyIiwiQVBJX1RJTUUiOjE3MzY4Njg2MjJ9.TAMkif848aDhNFahIOH4U3unUAs3r7TZsRP0K9rKhoI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/journal-backend/api/user/delete_journal/20",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"journal-backend",
+						"api",
+						"user",
+						"delete_journal",
+						"20"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/get_personal_details",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjMiLCJlbWFpbCI6InB1Ymxpc2hlckBnbWFpbC5jb20iLCJ0eXBlIjoicHVibGlzaGVyIiwiQVBJX1RJTUUiOjE3Mzk0NTAzMDd9.2WyFgOf1s1K68pQi28_hl4T2JDAZZi2xsH53f5TN9AI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/journal-backend/api/user/get_personal_details",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"journal-backend",
+						"api",
+						"user",
+						"get_personal_details"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjIwIiwiZW1haWwiOiJrYWFydGkua2NAZ21haWwuY29tIiwidHlwZSI6ImF1dGhvciIsIkFQSV9USU1FIjoxNzM2NTE4MTYyfQ.wrf7lkj4GkML2ZZkUXDr0xRuscEQNSFPTo_iDN9V20s",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/journal-backend/api/user/update_journal?id=4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"journal-backend",
+						"api",
+						"user",
+						"update_journal"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "serach_reviewers-with-filter",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var template = `\r",
+							"<style type=\"text/css\">\r",
+							"    .tftable {font-size:14px;color:#333333;width:100%;border-width: 1px;border-color: #87ceeb;border-collapse: collapse;}\r",
+							"    .tftable th {font-size:18px;background-color:#87ceeb;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;text-align:left;}\r",
+							"    .tftable tr {background-color:#ffffff;}\r",
+							"    .tftable td {font-size:14px;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;}\r",
+							"    .tftable tr:hover {background-color:#e0ffff;}\r",
+							"</style>\r",
+							"\r",
+							"<table class=\"tftable\" border=\"1\">\r",
+							"    <tr>\r",
+							"        <th>Status</th>\r",
+							"        <th>Error</th>\r",
+							"    </tr>\r",
+							"    <tr>\r",
+							"        <td>{{response.status}}</td>\r",
+							"        <td>{{response.error}}</td>\r",
+							"    </tr>\r",
+							"</table>\r",
+							"`;\r",
+							"\r",
+							"function constructVisualizerPayload() {\r",
+							"    return { response: pm.response.json() }\r",
+							"}\r",
+							"\r",
+							"pm.visualizer.set(template, constructVisualizerPayload());"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "reviewer_name",
+							"value": "s",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/journal-backend/api/web/reviewers_search",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"journal-backend",
+						"api",
+						"web",
+						"reviewers_search"
+					],
+					"query": [
+						{
+							"key": "reviewer_name",
+							"value": "sh",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getJournalById",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjI5IiwiZW1haWwiOiJhYXJ0aTlAZ21haWwuY29tIiwidHlwZSI6ImF1dGhvciIsImNyZWF0ZWRfYXQiOiIyMDI1LTAxLTEzIDIzOjI1OjIwIiwiQVBJX1RJTUUiOjE3MzY4NTU3NjR9.Ts-XjX1pxUtm8P0DULY8_uh-TEn6rogzAUHGv7OpS5Y",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/journal-backend/api/user/get_journal_by_id/17",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"journal-backend",
+						"api",
+						"user",
+						"get_journal_by_id",
+						"17"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update_response",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjMiLCJlbWFpbCI6InB1Ymxpc2hlckBnbWFpbC5jb20iLCJ0eXBlIjoicHVibGlzaGVyIiwiQVBJX1RJTUUiOjE3MzcwMzcxODh9.D9Pm-4FJJczSWBV71iw4ZMrd98GSKE0eLz3d-hTFXDk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "aarti",
+							"type": "text"
+						},
+						{
+							"key": "contact",
+							"value": "9876543298",
+							"type": "text"
+						},
+						{
+							"key": "profile_image",
+							"type": "file",
+							"src": "postman-cloud:///1ef4725d-7e44-4c80-b3cf-b104577c512d"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/journal-backend/api/user/update_personal_details",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"journal-backend",
+						"api",
+						"user",
+						"update_personal_details"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "web by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/journal-backend/api/web/get_journal_by_id/17",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"journal-backend",
+						"api",
+						"web",
+						"get_journal_by_id",
+						"17"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "journal_search on web",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "getjournalswithReiewers",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjMiLCJlbWFpbCI6InB1Ymxpc2hlckBnbWFpbC5jb20iLCJ0eXBlIjoicHVibGlzaGVyIiwiQVBJX1RJTUUiOjE3Mzc3MDcwMDZ9.ZGeRmWp4B4TqSeOVrF3Ddjd6eCEB6tqHA8Gf29Hc4q8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/journal-backend/api/user/get_journals_join_requests",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"journal-backend",
+						"api",
+						"user",
+						"get_journals_join_requests"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update journal status",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEyIiwiZW1haWwiOiJndXB0YTBydGk5QGdtYWlsLmNvbSIsInR5cGUiOiJyZXZpZXdlciIsIkFQSV9USU1FIjoxNzM3NjIwNTg5fQ.wTFd8GM7VdHP1HZRftGONxC1mgmy-c0Ylv6Vv-c-2Bs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "journal_id",
+							"value": "8",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "approval_status",
+							"value": "approved",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/journal-backend/api/user/approve_reject_request/20",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"journal-backend",
+						"api",
+						"user",
+						"approve_reject_request",
+						"20"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "submit research paper",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjMiLCJlbWFpbCI6InB1Ymxpc2hlckBnbWFpbC5jb20iLCJ0eXBlIjoicHVibGlzaGVyIiwiQVBJX1RJTUUiOjE3Mzc2NDIzNzl9.3GpQ9erwukbnUCz_TK94NEKHLO9rH8ImvHg-pZCaUVc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "paper_title",
+							"value": "jmfbnhsvdcnhs",
+							"type": "text"
+						},
+						{
+							"key": "abstract",
+							"value": "kwdhasf",
+							"type": "text"
+						},
+						{
+							"key": "keywords",
+							"value": "utghfbgdgf",
+							"type": "text"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/kaart/Downloads/image-20250120-124003 (1).png"
+						},
+						{
+							"key": "author_name",
+							"value": "jdgfhdnbv",
+							"type": "text"
+						},
+						{
+							"key": "author_email",
+							"value": "dwkwdb@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "author_contact",
+							"value": "09876543",
+							"type": "text"
+						},
+						{
+							"key": "country",
+							"value": "4",
+							"type": "text"
+						},
+						{
+							"key": "department",
+							"value": "information technology",
+							"type": "text"
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/journal-backend/api/user/submit_research",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"journal-backend",
+						"api",
+						"user",
+						"submit_research"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "join_journal",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjgiLCJlbWFpbCI6Imd1cHRhcnJ0aTlAZ21haWwuY29tIiwidHlwZSI6InJldmlld2VyIiwiQVBJX1RJTUUiOjE3Mzc3MjA5Nzh9.tAtrKPezvz1nXH5nunZ8180clTYftkUpxMTv9IDZ-Ic",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost/journal-backend/api/user/join_journal/12",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"journal-backend",
+						"api",
+						"user",
+						"join_journal",
+						"12"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "publisher_join_journal",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjMiLCJlbWFpbCI6InB1Ymxpc2hlckBnbWFpbC5jb20iLCJ0eXBlIjoicHVibGlzaGVyIiwiQVBJX1RJTUUiOjE3MzgwNDMzNjN9.QZMHVqJvG1ZdRx2wEdHTYUCf-5wQB6qmd5o1WmQOfsw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/journal-backend/api/user/publisher_join_journal/3/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"journal-backend",
+						"api",
+						"user",
+						"publisher_join_journal",
+						"3",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_publisher_journals",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjMiLCJlbWFpbCI6InB1Ymxpc2hlckBnbWFpbC5jb20iLCJ0eXBlIjoicHVibGlzaGVyIiwiQVBJX1RJTUUiOjE3MzgwNDMzNjN9.QZMHVqJvG1ZdRx2wEdHTYUCf-5wQB6qmd5o1WmQOfsw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/journal-backend/api/user/get_publisher_journals",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"journal-backend",
+						"api",
+						"user",
+						"get_publisher_journals"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete_researchPaper",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJlbWFpbCI6ImF1dGhvckBnbWFpbC5jb20iLCJ0eXBlIjoiYXV0aG9yIiwiQVBJX1RJTUUiOjE3MzgyMjk2MTR9.s_39O8LApT_7n5s1RMmZQ-vSmcSQXmxUvUqXUmK3jow",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/journal-backend/api/user/delete_research/13",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"journal-backend",
+						"api",
+						"user",
+						"delete_research",
+						"13"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update_research_paper",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJlbWFpbCI6ImF1dGhvckBnbWFpbC5jb20iLCJ0eXBlIjoiYXV0aG9yIiwiQVBJX1RJTUUiOjE3MzgyMjk2MTR9.s_39O8LApT_7n5s1RMmZQ-vSmcSQXmxUvUqXUmK3jow",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "author_contact",
+							"value": "7777777777",
+							"type": "text"
+						},
+						{
+							"key": "keywords",
+							"value": "is trah se to hm kurban gye  kl mile dgabaz ",
+							"type": "text"
+						},
+						{
+							"key": "abstract",
+							"value": "jigrrrrrrrwwwwwwwwwwww",
+							"type": "text"
+						},
+						{
+							"key": "paper_title",
+							"value": "what's next gime me the challenge",
+							"type": "text"
+						},
+						{
+							"key": "author_name",
+							"value": "Gupta Aarti",
+							"type": "text"
+						},
+						{
+							"key": "affiliation",
+							"value": "channnnnnnnnnnnddi",
+							"type": "text"
+						},
+						{
+							"key": "co_authors[0][co_author_name]",
+							"value": "vvvvvvvvvvvv",
+							"type": "text"
+						},
+						{
+							"key": "co_authors[0][co_author_email]",
+							"value": "dddddddddddddddd@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "co_authors[0][co_author_contact]",
+							"value": "8765432356",
+							"type": "text"
+						},
+						{
+							"key": "co_authors[0][co_author_country]",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "co_authors[0][co_author_department]",
+							"value": " ",
+							"type": "text"
+						},
+						{
+							"key": "co_authors[0][co_author_affiliation]",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/journal-backend/api/user/update_research_paper/15",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"journal-backend",
+						"api",
+						"user",
+						"update_research_paper",
+						"15"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update_publication",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJlbWFpbCI6ImF1dGhvckBnbWFpbC5jb20iLCJ0eXBlIjoiYXV0aG9yIiwiQVBJX1RJTUUiOjE3MzgyMjk2MTR9.s_39O8LApT_7n5s1RMmZQ-vSmcSQXmxUvUqXUmK3jow",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "authors",
+							"value": "ghmaili",
+							"type": "text"
+						},
+						{
+							"key": "paper_title",
+							"value": "hythuy",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/journal-backend/api/user/update_publication/15",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"journal-backend",
+						"api",
+						"user",
+						"update_publication",
+						"15"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get research_papers",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJlbWFpbCI6ImF1dGhvckBnbWFpbC5jb20iLCJ0eXBlIjoiYXV0aG9yIiwiQVBJX1RJTUUiOjE3MzgyMjk2MTR9.s_39O8LApT_7n5s1RMmZQ-vSmcSQXmxUvUqXUmK3jow",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/journal-backend/api/user/get_research_papers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"journal-backend",
+						"api",
+						"user",
+						"get_research_papers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-publications",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhZG1pbl9pZCI6IjEiLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImltYWdlIjoiaHR0cDpcL1wvbG9jYWxob3N0XC9qb3VybmFsLWJhY2tlbmRcL2Fzc2V0c1wvbm8tdXNlci5qcGciLCJBUElfVElNRSI6MTczODI0ODAxNH0.aqq1lac5QZH63wMO8I2s2oUCeKR5tL_7Fwxb3Fs3uus",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/journal-backend/api/admin/get_publications",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"journal-backend",
+						"api",
+						"admin",
+						"get_publications"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin_login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "admin@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "000000",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/journal-backend/api/auth/admin_login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"journal-backend",
+						"api",
+						"auth",
+						"admin_login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "approve_reject_publication",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhZG1pbl9pZCI6IjEiLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImltYWdlIjoiaHR0cDpcL1wvbG9jYWxob3N0XC9qb3VybmFsLWJhY2tlbmRcL2Fzc2V0c1wvbm8tdXNlci5qcGciLCJBUElfVElNRSI6MTczODI0ODAxNH0.aqq1lac5QZH63wMO8I2s2oUCeKR5tL_7Fwxb3Fs3uus",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "ppuid",
+							"value": "11",
+							"type": "text"
+						},
+						{
+							"key": "approval_status",
+							"value": "approved",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/journal-backend/api/admin/approve_reject_publication",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"journal-backend",
+						"api",
+						"admin",
+						"approve_reject_publication"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get research by id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJlbWFpbCI6ImF1dGhvckBnbWFpbC5jb20iLCJ0eXBlIjoiYXV0aG9yIiwiQVBJX1RJTUUiOjE3MzgzMTY4OTR9.frTZnBEUn2DNc43y0nh0RLl_gMP3ToH2JcXMW962N9Y",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/journal-backend/api/user/get_research_by_id/29",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"journal-backend",
+						"api",
+						"user",
+						"get_research_by_id",
+						"29"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_publication_by_id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/journal-backend/api/web/get_publication_by_id/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"journal-backend",
+						"api",
+						"web",
+						"get_publication_by_id",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_published_papers_by_journal",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/journal-backend/api/web/get_published_papers_by_journal/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"journal-backend",
+						"api",
+						"web",
+						"get_published_papers_by_journal",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "change_publish_request_status",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE3IiwiZW1haWwiOiJyZXZpZXdlcjBAZ21haWwuY29tIiwidHlwZSI6InJldmlld2VyIiwiQVBJX1RJTUUiOjE3Mzg4OTc4MjJ9.aY-id2OKs8Hk2dpZnMpVTgLY_CWuJ1R1HDB2nq_Qwxc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "status",
+							"value": "approved",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/journal-backend/api/user/change_publish_request_status/17",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"journal-backend",
+						"api",
+						"user",
+						"change_publish_request_status",
+						"17"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "approved",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_authors",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhZG1pbl9pZCI6IjEiLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImltYWdlIjoiaHR0cDpcL1wvbG9jYWxob3N0XC9qb3VybmFsLWJhY2tlbmRcL2Fzc2V0c1wvbm8tdXNlci5qcGciLCJBUElfVElNRSI6MTczOTI3ODkxM30.S9z-b-16At6kETZeSnD84s3OAg1tikXlBDLbHIG48n0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/journal-backend/api/admin/get_authors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"journal-backend",
+						"api",
+						"admin",
+						"get_authors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "change password",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhZG1pbl9pZCI6IjEiLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImltYWdlIjoiaHR0cDpcL1wvbG9jYWxob3N0XC9qb3VybmFsLWJhY2tlbmRcL2Fzc2V0c1wvbm8tdXNlci5qcGciLCJBUElfVElNRSI6MTczOTUzOTA0OH0.TSS5Nx44JoRY-wAv64WkrE3Wul87KYta7nCWnoVVW94",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "old_password",
+							"value": "000000",
+							"type": "text"
+						},
+						{
+							"key": "new_password",
+							"value": "111111",
+							"type": "text"
+						},
+						{
+							"key": "confirm_password",
+							"value": "111111",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/journal-backend/api/admin/change-password",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"journal-backend",
+						"api",
+						"admin",
+						"change-password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_transactions",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhZG1pbl9pZCI6IjEiLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImltYWdlIjoiaHR0cDpcL1wvbG9jYWxob3N0XC9qb3VybmFsLWJhY2tlbmRcL2Fzc2V0c1wvbm8tdXNlci5qcGciLCJBUElfVElNRSI6MTc0MTQxMzMwMH0.ZAuoQQfY5WOu2RO8YvTTA7_v06qq4WbtxH641tDqips",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/journal-backend/api/admin/transaction_listing",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"journal-backend",
+						"api",
+						"admin",
+						"transaction_listing"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list_contact_us",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhZG1pbl9pZCI6IjEiLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImltYWdlIjoiaHR0cDpcL1wvbG9jYWxob3N0XC9qb3VybmFsLWJhY2tlbmRcL2Fzc2V0c1wvbm8tdXNlci5qcGciLCJBUElfVElNRSI6MTc0MTQxMzMwMH0.ZAuoQQfY5WOu2RO8YvTTA7_v06qq4WbtxH641tDqips",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/journal-backend/api/admin/contact_listing",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"journal-backend",
+						"api",
+						"admin",
+						"contact_listing"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete-contact_us",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "add_publication",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
